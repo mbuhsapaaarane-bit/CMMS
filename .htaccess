@@ -1,0 +1,39 @@
+# ===========================================================================
+# InfinityFree — htdocs/.htaccess
+# Document root InfinityFree = htdocs/. Semua file project di-upload ke sini.
+# Tugas file ini: teruskan SEMUA request ke folder public/.
+# ===========================================================================
+
+# --- 1. Directus index — kalau request kosong, langsung ke public/
+DirectoryIndex public/index.php
+
+# --- 2. Rewrite rules
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Kalau request sudah mengarah ke public/, biarkan (hindari loop)
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteCond %{REQUEST_URI} !^/public$
+    # Teruskan ke public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# --- 3. Blok akses file sensitif
+<IfModule mod_authz_core.c>
+    <FilesMatch "^\.(env|git|htaccess)">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+
+<IfModule !mod_authz_core.c>
+    <FilesMatch "^\.(env|git|htaccess)">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+</IfModule>
+
+# --- 4. Matikan directory listing
+<IfModule mod_negotiation.c>
+    Options -Indexes
+</IfModule>
