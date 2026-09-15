@@ -33,12 +33,9 @@ Ekstensi PHP yang dibutuhkan: `pdo_sqlite` atau `pdo_mysql`, `mbstring`,
 
 ## Tangkapan Layar
 
-> 📸 Tambahkan screenshot aplikasi di sini, contoh:
+![Login](docs/screenshots/login.png)
+![Dashboard](docs/screenshots/dashboard.png)
 
-```
-![Login] docs/screenshots/login.png
-![Dashboard] docs/screenshots/dashboard.png
-```
 
 ## Struktur Penting
 
