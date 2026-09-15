@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "id": "/",
   "name": "CMMS PT. Sumber Masanda Jaya",
@@ -31,3 +32,38 @@
     }
   ]
 }
+=======
+{
+  "id": "/",
+  "name": "CMMS PT. Sumber Masanda Jaya",
+  "short_name": "CMMS",
+  "description": "Computerized Maintenance Management System PT. Sumber Masanda Jaya.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F5F3F0",
+  "theme_color": "#FF6B00",
+  "lang": "id",
+  "categories": ["business", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
+>>>>>>> bc60b796583544d0723aed639250b1377c2fca05
