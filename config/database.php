@@ -3,7 +3,7 @@
 use Illuminate\Support\Str;
 
 return [
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => env('DB_CONNECTION', env('MYSQLHOST') ? 'mysql' : 'sqlite'),
     'connections' => [
         'sqlite' => [
             'driver' => 'sqlite',
@@ -16,11 +16,11 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'mysql.railway.internal'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'cmms'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', 'AyLjBNzukszNDSqGzmWfiXdjUsKlKyBF'),
+            'host' => env('DB_HOST', env('MYSQLHOST', '127.0.0.1')),
+            'port' => env('DB_PORT', env('MYSQLPORT', '3306')),
+            'database' => env('DB_DATABASE', env('MYSQLDATABASE', 'cmms')),
+            'username' => env('DB_USERNAME', env('MYSQLUSER', 'root')),
+            'password' => env('DB_PASSWORD', env('MYSQLPASSWORD', '')),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
