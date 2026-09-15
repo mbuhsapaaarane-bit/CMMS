@@ -23,7 +23,7 @@ Aplikasi **Computerized Maintenance Management System (CMMS)** berbasis web + PW
 
 | Kebutuhan | Versi |
 |---|---|
-| PHP | 8.1+ |
+| PHP | 8.2+ |
 | Composer | 2.x |
 | Database | SQLite (default) atau MySQL/MariaDB 5.7+ |
 | Web server | Apache / Nginx / `php artisan serve` |
