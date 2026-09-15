@@ -3362,3 +3362,13 @@ Stack trace:
 [stacktrace]
 #0 {main}
 "} 
+[2026-09-15 17:22:59] local.ERROR: require(D:\Project\cmms\routes/console.php): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): require(D:\\Project\\cmms\\routes/console.php): Failed to open stream: No such file or directory at D:/Project/cmms/app/Console/Kernel.php:25)
+[stacktrace]
+#0 D:/Project/cmms/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(255): Illuminate/Foundation/Bootstrap/HandleExceptions->handleError()
+#1 D:/Project/cmms/app/Console/Kernel.php(25): Illuminate/Foundation/Bootstrap/HandleExceptions->{closure:Illuminate/Foundation/Bootstrap/HandleExceptions::forwardsTo():254}()
+#2 D:/Project/cmms/app/Console/Kernel.php(25): require('...')
+#3 D:/Project/cmms/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(453): App/Console/Kernel->commands()
+#4 D:/Project/cmms/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(199): Illuminate/Foundation/Console/Kernel->bootstrap()
+#5 D:/Project/cmms/artisan(14): Illuminate/Foundation/Console/Kernel->handle()
+#6 {main}
+"} 
